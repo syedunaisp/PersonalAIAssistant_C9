@@ -37,7 +37,7 @@ npm run lint --prefix web
 
 ## Next
 
-1. Create GitHub repo + first commit.
+1. [x] Create GitHub repo + first commit (https://github.com/syedunaisp/PersonalAIAssistant_C9).
 2. M3.9 milestone check, then M4 (auto-read audit + read-budget carry folded in from M3.7).
 3. Open verifications: M2.6 live calendar read + calendar quick-add retry (2 tasks each on success).
 
