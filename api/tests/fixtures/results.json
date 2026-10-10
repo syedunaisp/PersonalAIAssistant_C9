@@ -1,0 +1,5 @@
+{
+  "google_calendar_find_events": "Event: Team sync, tomorrow 10:00-10:30, Room 2",
+  "gmail_find_email": "Found 2 emails matching the query: 1) 'Project update' from rahul@example.com, 2) 'Invoice' from billing@example.com",
+  "gmail_create_draft": "Draft created successfully with id: d1234567890"
+}

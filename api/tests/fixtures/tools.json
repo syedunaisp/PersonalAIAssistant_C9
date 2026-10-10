@@ -1,0 +1,45 @@
+[
+  {
+    "name": "google_calendar_find_events",
+    "description": "Find calendar events for a date",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "date": { "type": "string", "description": "Date to search, e.g. tomorrow or 2026-10-10" }
+      },
+      "required": ["date"]
+    }
+  },
+  {
+    "name": "gmail_find_email",
+    "description": "Search emails in Gmail",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string", "description": "Search query" }
+      },
+      "required": ["query"]
+    }
+  },
+  {
+    "name": "gmail_create_draft",
+    "description": "Create an email draft",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "to": {
+          "description": "Recipient email address",
+          "anyOf": [ { "type": "array", "items": { "type": "string" } }, { "type": "null" } ]
+        },
+        "subject": { "type": "string", "description": "Email subject" },
+        "body": { "type": "string", "description": "Email body" }
+      },
+      "required": ["to", "subject", "body"]
+    }
+  },
+  {
+    "name": "enable_zapier_action",
+    "description": "Management meta-tool that must NEVER be offered to the model",
+    "input_schema": { "type": "object", "properties": {}, "required": [] }
+  }
+]

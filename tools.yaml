@@ -1,0 +1,20 @@
+# tools.yaml - tool name -> read | write | destructive (spec section 6.1)
+# ANYTHING NOT LISTED DEFAULTS TO WRITE (fail safe: approval required).
+# Managed mode: one entry per enabled Zapier action tool.
+# Real tool names observed from the user's Zapier MCP server, 2026-10-10 (M3.8).
+
+# Gmail
+gmail_find_email: read
+gmail_create_draft: write
+gmail_reply_to_email: write
+gmail_send_email: write
+
+# Google Calendar
+google_calendar_find_events: read
+google_calendar_create_detailed_event: write
+google_calendar_quick_add_event: write
+
+# Zapier management meta-tools must NEVER be exposed to the model (spec 6.3 step 4).
+# The server also exposes get_dynamic_properties_schema / list_dynamic_enum_values /
+# get_configuration_url - these are filtered by FORBIDDEN_TOOL_PATTERNS in
+# api/orchestrator.py, so they are deliberately NOT classified here.
